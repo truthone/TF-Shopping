@@ -367,3 +367,19 @@ footer {
     font-size: 24px;
   }
 }
+
+/* 검색기능 */
+input {
+  position: relative;
+}
+#searchResults {
+  width: 100%;
+  position: absolute;
+  background-color: #040005;
+  padding: 15px;
+  cursor: pointer;
+}
+
+li > a {
+  color: rgb(195, 255, 0);
+}
