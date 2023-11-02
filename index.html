@@ -14,6 +14,10 @@
     <body>
         <div class="sticky">
             <header>
+                <div id="cartListContainer">
+                    <h3>장바구니</h3>
+                    <ul id="cartList"></ul>
+                </div>
                 <div id="logo">밸밸마켓</div>
                 <div id="search-container">
                     <div class="icon material-symbols-rounded" id="search-icon">search</div>
@@ -21,11 +25,6 @@
                     <ul id="search-results"></ul>
                 </div>
             </header>
-        </div>
-
-        <div id="cartListContainer">
-            <h3>장바구니</h3>
-            <ul id="cartList"></ul>
         </div>
         <main>
             <article>
@@ -53,7 +52,7 @@
                             </div>
                             <button>
                                 <span class="icon material-symbols-rounded button-add-cart"
-                                    onclick="addToCart()">add_Circle
+                                    onclick="addToCart('팔론 와인잔 ')">add_Circle
                                 </span>
                             </button>
                         </div>
@@ -70,7 +69,7 @@
                             </div>
                             <button>
                                 <span class="icon material-symbols-rounded button-add-cart"
-                                    onclick="addToCart()">add_Circle
+                                    onclick="addToCart('와인잔')">add_Circle
                                 </span>
                             </button>
                         </div>
@@ -87,7 +86,7 @@
                             </div>
                             <button>
                                 <span class="icon material-symbols-rounded button-add-cart"
-                                    onclick="addToCart()">add_Circle
+                                    onclick="addToCart('와인잔')">add_Circle
                                 </span>
                             </button>
                         </div>
@@ -111,8 +110,6 @@
                     </div>
                 </div class="grid">
             </section>
-
-
         </main>
 
         <footer>

@@ -25,7 +25,9 @@ function displayCart() {
         item.textContent = cart[i];
         
         let removeButton = document.createElement('button');
+        removeButton.style.color = 'white';
         removeButton.textContent = '제거';
+        
         (function(index) {
             removeButton.addEventListener('click', function() {
                 removeFromCart(index);
