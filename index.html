@@ -20,14 +20,13 @@
                     <input type="text" id="search-input" placeholder="검색" />
                     <ul id="search-results"></ul>
                 </div>
-                <div id="menu">
-                    <span class="icon material-symbols-rounded">shopping_cart_checkout</span>
-                    <span class="icon material-symbols-rounded">person</span>
-                </div>
             </header>
         </div>
 
-
+        <div id="cartListContainer">
+            <h3>장바구니</h3>
+            <ul id="cartList"></ul>
+        </div>
         <main>
             <article>
                 <br />
@@ -54,7 +53,7 @@
                             </div>
                             <button>
                                 <span class="icon material-symbols-rounded button-add-cart"
-                                    onclick="addCart()">add_Circle
+                                    onclick="addToCart()">add_Circle
                                 </span>
                             </button>
                         </div>
@@ -71,7 +70,7 @@
                             </div>
                             <button>
                                 <span class="icon material-symbols-rounded button-add-cart"
-                                    onclick="addCart()">add_Circle
+                                    onclick="addToCart()">add_Circle
                                 </span>
                             </button>
                         </div>
@@ -88,7 +87,7 @@
                             </div>
                             <button>
                                 <span class="icon material-symbols-rounded button-add-cart"
-                                    onclick="addCart()">add_Circle
+                                    onclick="addToCart()">add_Circle
                                 </span>
                             </button>
                         </div>
@@ -105,7 +104,7 @@
                             </div>
                             <button>
                                 <span class="icon material-symbols-rounded button-add-cart"
-                                    onclick="addCart()">add_Circle
+                                    onclick="addToCart('와인잔')">add_Circle
                                 </span>
                             </button>
                         </div>
