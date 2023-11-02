@@ -373,6 +373,7 @@ input {
   position: relative;
 }
 #searchResults {
+  display: none;
   width: 100%;
   position: absolute;
   background-color: #040005;
