@@ -17,7 +17,9 @@ searchInput.addEventListener('focus', function () {
 });
 // searchInput에서 포커스가 벗어났을 때
 searchInput.addEventListener('blur', function () {
-    searchResults.style.display = 'none';
+    if (searchInput.value == '') {
+    searchResults.style.display = 'none';  
+  }
 });
 
 function performSearch() {

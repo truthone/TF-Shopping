@@ -115,12 +115,12 @@ ul {
 
 article {
   width: 100%;
-  height: 40vh;
+  height: fit-content;
+  padding: 100px;
   background: linear-gradient(
     to bottom,
     #040005,
     #2e2e2e,
-    #7a7a7a,
     #b2b2b2,
     #ffffff
   );
@@ -402,6 +402,7 @@ footer {
   width: inherit;
   min-height: 67px;
   position: absolute;
+  right: -15px;
   bottom: -80px;
   background-color: #040005;
   padding: 15px;
@@ -410,4 +411,43 @@ footer {
 
 li > a {
   color: rgb(195, 255, 0);
+}
+
+@media all and (max-width: 800px) {
+    #search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 150px;
+  }
+
+  #search-input {
+    width: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width 0.4s ease-in-out;
+  }
+
+  #search-input:focus {
+    width: 150px;
+  }
+
+  #search-icon {
+    margin: 10px;
+  }
+
+  #search-results {
+    display: none;
+    width: inherit;
+    min-height: 67px;
+    position: absolute;
+    right: -15px;
+    bottom: -80px;
+    background-color: #040005;
+    padding: 15px;
+    cursor: pointer;
+  }
 }
