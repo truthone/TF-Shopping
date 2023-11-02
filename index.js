@@ -14,14 +14,14 @@ searchInput.addEventListener("input", performSearch);
 // 검색 함수 구현
 function performSearch() {
   const searchTerm = searchInput.value.toLowerCase();
-
-  // 데이터를 필터링하여 검색 결과 어레이 생성
-  const filteredData = data.filter((item) =>
-    item.name.toLowerCase().includes(searchTerm)
-  );
-
-  // 검색 결과를 화면에 표시
-  renderResults(filteredData);
+  if (searchTerm || searchTerm != '') {
+      // 데이터를 필터링하여 검색 결과 어레이 생성
+      const filteredData = data.filter((item) =>
+        item.name.toLowerCase().includes(searchTerm)
+      );
+      // 검색 결과를 화면에 표시
+      renderResults(filteredData);
+  }
 }
 
 // 검색 결과를 화면에 렌더링하는 함수
