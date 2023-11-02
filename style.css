@@ -369,13 +369,40 @@ footer {
 }
 
 /* 검색기능 */
-input {
+
+#search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 200px;
+  text-align: end;
   position: relative;
 }
-#searchResults {
+
+#search-input {
+  width: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.4s ease-in-out;
+}
+
+#search-input:focus {
+  width: 200px;
+}
+
+#search-icon {
+  margin: 10px;
+}
+
+#search-results {
   display: none;
-  width: 100%;
+  width: inherit;
+  min-height: 67px;
   position: absolute;
+  bottom: -80px;
   background-color: #040005;
   padding: 15px;
   cursor: pointer;

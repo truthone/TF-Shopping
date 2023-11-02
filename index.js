@@ -1,5 +1,5 @@
-const searchInput = document.getElementById("searchInput");
-const searchResults = document.getElementById("searchResults");
+const searchInput = document.getElementById("search-input");
+const searchResults = document.getElementById("search-results");
 const data = [
   { name: "사과", link: "./apple.html" },
   { name: "바나나" },
