@@ -43,6 +43,7 @@ a {
   top: 0;
   padding-top: 7px;
   background-color: white;
+  z-index: 100;
 }
 
 header {
@@ -77,6 +78,7 @@ header {
   text-decoration: none;
   transform: scale(1.8);
   cursor: pointer;
+  z-index: -100;
 }
 
 icon:hover {
@@ -451,3 +453,16 @@ li > a {
     cursor: pointer;
   }
 }
+
+/* 장바구니 */
+.flex-between {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+button{
+
+background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer}
