@@ -31,7 +31,15 @@
 
     <main>
       <div class="container flex-row">
-        <img src="./img/img7.jpg" alt="상품 이미지" class="product-image" />
+        <div class="carousel-container">
+          <button class="carousel-btn prev">←</button>
+          <div class="carousel">
+            <img src="./img/img2.jpg" alt="상품 이미지" class="product-image" />\
+            <img src="./img/img7.jpg" alt="상품 이미지" class="product-image" />
+            <img src="./img/img3.jpg" alt="상품 이미지" class="product-image" />
+          </div>
+          <button class="carousel-btn next">→</button>
+        </div>
         <section id="util">
           <h1 class="product-title">오버사이즈 멜톤 더플 롱 코트 네이비</h1>
           <h1 class="product-price">₩50,000</h1>
@@ -59,7 +67,7 @@
         ulift@ulift.kr<br />All Photos by Unsplash
       </p>
     </footer>
-    <script src="./index.js"></script>
+    <script src="./carousel.js"></script>
   </body>
 
 </html>
