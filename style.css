@@ -120,13 +120,7 @@ article {
   width: 100%;
   height: fit-content;
   padding: 100px;
-  background: linear-gradient(
-    to bottom,
-    #040005,
-    #2e2e2e,
-    #b2b2b2,
-    #ffffff
-  );
+  background: linear-gradient(to bottom, #040005, #2e2e2e, #b2b2b2, #ffffff);
   color: rgb(195, 255, 0);
   font-size: 100px;
   font-family: "LINESeedKR-Bd";
@@ -185,22 +179,6 @@ article {
 
 .brand-logo {
   background-size: cover;
-}
-
-#brand1 {
-  background-image: url("brand1.jpg");
-}
-
-#brand2 {
-  background-image: url("img11.jpg");
-}
-
-#brand3 {
-  background-image: url("brand3.jpg");
-}
-
-#brand4 {
-  background-image: url("brand4.jpg");
 }
 
 .item-thumbnail {
@@ -280,56 +258,6 @@ footer {
   margin: 15px 0px;
   font-size: 12px;
   line-height: 150%;
-}
-
-/*아이템 할당*/
-
-#brand1-thumb1 {
-  background-image: url("./img/img19.jpg");
-}
-
-#brand1-thumb2 {
-  background-image: url("./img/img16.jpg");
-}
-
-#brand1-thumb3 {
-  background-image: url("./img/img17.jpg");
-}
-
-#brand1-thumb4 {
-  background-image: url("./img/img20.jpg");
-}
-
-#brand2-thumb1 {
-  background-image: url("./img/img10.jpg");
-}
-
-#brand2-thumb2 {
-  background-image: url("./img/img14.jpg");
-}
-
-#brand2-thumb3 {
-  background-image: url("./img/img12.jpg");
-}
-
-#brand2-thumb4 {
-  background-image: url("./img/img13.jpg");
-}
-
-#brand3-thumb1 {
-  background-image: url("./img/img2.jpg");
-}
-
-#brand3-thumb2 {
-  background-image: url("./img/img3.jpg");
-}
-
-#brand3-thumb3 {
-  background-image: url("./img/img4.jpg");
-}
-
-#brand3-thumb4 {
-  background-image: url("./img/img7.jpg");
 }
 
 /*Media Query*/
@@ -417,7 +345,7 @@ li > a {
 }
 
 @media all and (max-width: 800px) {
-    #search-container {
+  #search-container {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -464,11 +392,17 @@ li > a {
   margin: 10px;
 }
 
-button{
-background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
 }
 
-#cartListContainer{
+#cartListContainer {
   position: fixed;
   bottom: 50px;
   left: 50px;
@@ -480,7 +414,7 @@ background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; 
   border-radius: 15px;
   background-color: #040005;
   color: white;
-  border: 5px solid rgb(195, 255, 0); 
+  border: 5px solid rgb(195, 255, 0);
   cursor: pointer;
   font-size: 30px;
   padding: 10px 0 10px 10px;
@@ -500,32 +434,30 @@ background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; 
 
 /* 전체 스크롤바의 너비 설정 (Chrome, Edge, Opera, Safari) */
 ::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
-
-
 
 /* 스크롤바의 핸들 (실제 움직이는 바) 스타일링 */
 ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+  background: #888;
+  border-radius: 10px;
 }
 
 /* 스크롤바 핸들을 호버할 때의 스타일 */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 /* Firefox */
 body {
-    scrollbar-width: thin;
-    scrollbar-color: #888 #f1f1f1;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
 }
 
 ul {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
 }

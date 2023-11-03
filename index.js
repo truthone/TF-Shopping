@@ -1,51 +1,36 @@
-const searchInput = document.getElementById("search-input");
-const searchResults = document.getElementById("search-results");
-const data = [
-  { name: "사과", link: "./apple.html" },
-  { name: "바나나" },
-  { name: "체리" },
-  { name: "자두" },
-  { name: "포도" },
-];
+// 상품을 HTML로 변환하는 함수
 
-searchInput.addEventListener("input", performSearch);
-
-searchInput.addEventListener('focus', function () {
-  if (searchInput.value !== '') {
-    searchResults.style.display = 'block';  
-  }
-});
-// searchInput에서 포커스가 벗어났을 때
-searchInput.addEventListener('blur', function () {
-    if (searchInput.value == '') {
-    searchResults.style.display = 'none';  
-  }
-});
-
-function performSearch() {
-  const searchTerm = searchInput.value.toLowerCase();
-  
-  if (searchTerm && searchTerm != '') {
-    searchResults.style.display = 'block';
-
-    const filteredData = data.filter((item) =>
-      item.name.toLowerCase().includes(searchTerm)
-    );
-    renderResults(filteredData);
-  } else {
-    searchResults.style.display = 'none';
-  }
+function createProductCard(product) {
+  return `
+        <div class="product-card item1" id="${product.productId}">
+        <img class="product-thumbnail" id="brand1-thumb1" src="${
+          product.imageUrl
+        }"></div>
+        <div class="flex-between">
+            <div class="product-info">
+                <a href="#" class="product-name">${product.productName}</a>
+                <div class="price-info">
+                    <span class="original-price">${product.price.toLocaleString()}원</span>
+                    <span class="discount-price">${product.discountPrice.toLocaleString()}원</span>
+                </div>
+            </div>
+            <button>
+                <span class="icon material-symbols-rounded button-add-cart"
+                    onclick="addToCart('팔론 와인잔')">add_Circle
+                </span>
+            </button>
+        </div>
+      </div>
+  `;
 }
 
-function renderResults(results) {
-  searchResults.innerHTML = "";
-
-  results.map((item) => {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = item.link;
-    a.textContent = item.name;
-    li.appendChild(a);
-    searchResults.appendChild(li);
-  });
+// 상품 데이터를 사용하여 상품 카드를 생성하고 페이지에 추가
+function renderProducts(products) {
+  const productContainer = document.getElementById("productContainer");
+  productContainer.innerHTML = products.map(createProductCard).join("");
 }
+
+// 상품 렌더링
+document.addEventListener("DOMContentLoaded", () => {
+  renderProducts(products);
+});
