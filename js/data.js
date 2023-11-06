@@ -1,7 +1,7 @@
 // 가짜 상품 데이터
-const products = [
+export const promotion = [
   {
-    sectionName: "1 + 1 특가",
+    sectionTitle: "1 + 1 특가",
     products: [
       {
         productName: "상품 1",
@@ -39,5 +39,5 @@ const products = [
         imageUrl: "https://media.graphassets.com/eAeN0gSqTuuqYyGHO01x",
       },
     ],
-  }
+  },
 ];

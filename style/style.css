@@ -147,11 +147,11 @@ article {
 }
 
 .grid {
+  width: 100%;
   border: 1px solid black;
   border-right: none;
-  width: 100%;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: "brand-logo item1 item2 item3 item4";
   margin: 0px 0px 20px 0px;
 }
@@ -184,6 +184,7 @@ article {
 .item-thumbnail {
   grid-area: item-thumbnail;
 }
+
 .item-info {
   grid-area: item-info;
 }
@@ -275,7 +276,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-      "brand-logo brand-logo"
+      "brand-logo"
       "item1 item2"
       "item3 item4";
     margin: 0px 0px 20px 0px;
@@ -460,4 +461,9 @@ ul {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 0px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
 }
