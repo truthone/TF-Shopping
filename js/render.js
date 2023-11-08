@@ -13,7 +13,7 @@ function createProductCard(product, itemSequence) {
     }" alt="상품썸네일이미지" />
     <div class="flex-between">
       <div class="item-info">
-          <a href="#" class="item-name">${product.productName}</a>
+          <a href="${product.link}" class="item-name">${product.productName}</a>
           <div class="price-info">
             <p class="item-price">${product.price.toLocaleString()}원</p>
             <p class="saled-price">${product.discountPrice.toLocaleString()}원</p>
