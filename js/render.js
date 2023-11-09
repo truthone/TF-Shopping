@@ -38,7 +38,6 @@ function renderPromotions(promotions) {
       <section>
         <h1 class="section-title">${promotion.sectionTitle}</h1>
         <div class="productContainer grid">
-          <div class="brand-logo" id="brand1">1 + 1<br />찬 스 →</div>
         </div>
       </section>
       `;
