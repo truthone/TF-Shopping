@@ -1,7 +1,8 @@
-import { promotion } from "./data.js";
+import { promotions } from "./data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  renderProducts(promotion[0]);
+  renderPromotions(promotions);
+  renderProducts(promotions);
 });
 
 function createProductCard(product, itemSequence) {
@@ -12,7 +13,7 @@ function createProductCard(product, itemSequence) {
     }" alt="상품썸네일이미지" />
     <div class="flex-between">
       <div class="item-info">
-          <a href="#" class="item-name">${product.productName}</a>
+          <a href="${product.link}" class="item-name">${product.productName}</a>
           <div class="price-info">
             <p class="item-price">${product.price.toLocaleString()}원</p>
             <p class="saled-price">${product.discountPrice.toLocaleString()}원</p>
@@ -28,18 +29,38 @@ function createProductCard(product, itemSequence) {
   `;
 }
 
-function renderProducts(promotion) {
-  const productContainer =
-    document.getElementsByClassName("productContainer")[0];
-  const products = promotion.products;
-  let itemSequence = 0;
-  const result = products
-    .map((product) => {
-      itemSequence++;
-      if (itemSequence == 5) itemSequence = 1;
-      return createProductCard(product, itemSequence);
+function renderPromotions(promotions) {
+  const mainTag = document.getElementsByTagName("main")[0];
+
+  const result = promotions
+    .map((promotion) => {
+      return `
+      <section>
+        <h1 class="section-title">${promotion.sectionTitle}</h1>
+        <div class="productContainer grid">
+          <div class="brand-logo" id="brand1">1 + 1<br />찬 스 →</div>
+        </div>
+      </section>
+      `;
     })
     .join("");
-  console.log(result);
-  productContainer.innerHTML += result;
+
+  return (mainTag.innerHTML += result);
+}
+
+function renderProducts(promotions) {
+  for (let i = 0; i < promotions.length; i++) {
+    const productContainer =
+      document.getElementsByClassName("productContainer")[i];
+    let itemSequence = 0;
+
+    const result = promotions[i].products
+      .map((product) => {
+        itemSequence++;
+        if (itemSequence == 5) itemSequence = 1;
+        return createProductCard(product, itemSequence);
+      })
+      .join("");
+    productContainer.innerHTML += result;
+  }
 }
